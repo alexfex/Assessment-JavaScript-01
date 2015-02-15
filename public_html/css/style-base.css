@@ -1,0 +1,93 @@
+/* 
+    Created on : 14-Feb-2015, 8:51:51 PM
+    Author     : Alex
+*/
+
+body {
+    background-color:#79818C;
+    color:white;
+    font-family:Helvetica, sans-serif;
+    font-size:12px;
+}
+
+label {
+    font-size:9px;
+    text-transform:uppercase;
+}
+
+h1 {
+    font-family: 'Merriweather', serif;
+    font-style:italic;
+    font-weight:400;
+}
+
+h2 {
+    font-size:12px;
+    text-align: center;
+    padding:10px;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size:10px;
+    text-align: center;
+    padding:10px;
+    margin:0px;
+    text-transform: uppercase;
+}
+
+li {
+    float:left;
+    width:100%;
+    background:#F0F4F5;
+    color:#AAA;
+}
+li:nth-child(odd)  {
+    background:#BAC1C7;
+    color:white;
+}
+
+input::-webkit-input-placeholder {
+    color:#DDD!important;
+    text-transform:uppercase;
+}
+input:-moz-placeholder {
+    color:#DDD!important;
+    text-transform:uppercase;
+}
+input::-moz-placeholder {
+    color:#DDD!important;
+    text-transform:uppercase;
+}
+input:-ms-input-placeholder {
+    color:#DDD!important;
+    text-transform:uppercase;
+}
+
+
+li:nth-child(odd) > .item_actions {
+    border:1px solid #F0F4F5;
+}
+li:nth-child(even) > .item_actions {
+    border:1px solid #BAC1C7;
+}
+
+button,
+input {
+    font-size:11px;
+    border:2px solid white;
+    background-color:#99A2A9;
+    color:white;
+    padding:10px;
+}
+
+button {
+    color:#DDD;
+    text-transform: uppercase;
+}
+
+input,
+label,
+button {
+    width:100%;
+}

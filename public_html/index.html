@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/font-google.css" rel="stylesheet" type="text/css"/>
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
+        <title>Marvelous! - Alex Javascript Assessment</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div id="stage" class="container" ng-app="marvelousApp">
+            <div class="row">
+                <div class="col-sm-8">
+                    <h1>Marvelous!</h1>
+                    <article class="highlight">Lorum Ipsum is simply dummy text of the printing and type setting industry. Lorum Ipsum has been the industry's standard dummy text ever since.</article>
+                </div>
+                <div class="col-sm-4">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 ">
+                    <h2 class="gradient-light">Add an Item</h2>
+                </div>
+            </div>
+            <div class="row" id="ItemsController" ng-controller="ItemsController">
+                <div class="col-sm-4">
+                        <input id="item_input"  ng-model="newItemName" type="text" placeholder="enter item"/> 
+                        <input id="columns_input" ng-model="newItemColumn" list="columns_datalist" placeholder="choose column" />
+                        <datalist id="columns_datalist">
+                            <option value="Column 1">
+                            <option value="Column 2">
+                        </datalist>
+
+                        <button id="add_button" name="" ng-click="addItem();">Add Item</button>
+                        <label for="search">Search an Item</label>
+                        <div id="search_container"><input id="search_input" name="search" placeholder="search" ng-model="search"/>
+                            <i class="fa fa-search" id="input_search_icon"></i>
+                        </div>
+                </div>
+                <div class="col-sm-8">
+                    <div id="columns_container" class="row">
+                        <div id="column1_container" class="col-xs-6">
+                            <h3   class="gradient">Column 1</h3>
+                            <ul id="column1" class="nav">
+                                <li ng-repeat="item in column1.data| filter:search" id="item{{item.id}}">
+                                    <div class="item_title">{{item.title}}</div>  <div  class="item_actions"><a ng-click="deleteItem($index, 'column1')" class="delete-item">x</a></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="column2_container" class="col-xs-6">
+                            <h3   class="gradient">Column 2</h3>
+                            <ul  id="column2" class="nav">
+                                <li ng-repeat="item in column2.data| filter:search" id="item{{item.id}}">
+                                    <div class="item_title">{{item.title}}</div>  <div  class="item_actions"><a ng-click="deleteItem($index, 'column2')" class="delete-item">x</a></div>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/angular.js/angular.js" type="text/javascript"></script>  
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="js/bootstrap.js" type="text/javascript"></script>
+        <script src="js/scripts.js" type="text/javascript"></script>
+    </body>
+</html>

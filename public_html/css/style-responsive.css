@@ -1,0 +1,29 @@
+/* 
+    Created on : 14-Feb-2015, 8:53:50 PM
+    Author     : Alex
+*/
+
+@media (min-width:768px) {
+    
+    #stage  {
+        width:60%;
+    }
+    
+    #columns_input {
+        margin-bottom:107px;
+    }
+    
+}
+
+@media (max-width:767px) {
+    
+    #stage  {
+        width:80%;
+    }
+    
+    #search_container,
+    #columns_input {
+        margin-bottom:10px;
+    }
+    
+}
